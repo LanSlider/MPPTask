@@ -39,8 +39,7 @@ public class TesterController {
 
     @RequestMapping(value = "/testers/add", method = RequestMethod.POST)
     public String addTester(@ModelAttribute("tester") Tester tester) {
-        BugReport bugReport = bugReportService.getBugReportById(tester.getIdBugReport());
-        if((!isNumber(tester.getName()) && (!isNumber(tester.getCompanyName())) && (tester.getPhone()) < 9999999) && (tester.getPhone() > 1000000) ) {
+        if((!isNumber(tester.getName()) && (!isNumber(tester.getCompanyName())) && (tester.getPhone()) < 9999999) && (tester.getPhone() > 1000000) && (this.testerService.isGetBugReportById(tester.getIdBugReport())) ) {
             if (tester.getId() == 0) {
                 this.testerService.addTester(tester);
             } else {

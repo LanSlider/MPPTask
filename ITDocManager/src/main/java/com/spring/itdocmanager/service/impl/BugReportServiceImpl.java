@@ -1,7 +1,8 @@
-package com.spring.itdocmanager.service;
+package com.spring.itdocmanager.service.impl;
 
 import com.spring.itdocmanager.dao.BugReportDao;
 import com.spring.itdocmanager.model.BugReport;
+import com.spring.itdocmanager.service.BugReportService;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

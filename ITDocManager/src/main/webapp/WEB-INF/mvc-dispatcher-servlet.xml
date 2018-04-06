@@ -43,19 +43,19 @@
     </bean>
 
     <!--BookDao and BookService beans-->
-    <bean id="testerDao" class="com.spring.itdocmanager.dao.TesterDaoImpl">
+    <bean id="testerDao" class="com.spring.itdocmanager.dao.impl.TesterDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="testerService" class="com.spring.itdocmanager.service.TesterServiceImpl">
+    <bean id="testerService" class="com.spring.itdocmanager.service.impl.TesterServiceImpl">
         <property name="testerDao" ref="testerDao"/>
     </bean>
 
-    <bean id="bugReportDao" class="com.spring.itdocmanager.dao.BugReportDaoImpl">
+    <bean id="bugReportDao" class="com.spring.itdocmanager.dao.impl.BugReportDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="bugReportService" class="com.spring.itdocmanager.service.BugReportServiceImpl">
+    <bean id="bugReportService" class="com.spring.itdocmanager.service.impl.BugReportServiceImpl">
         <property name="bugReportDao" ref="bugReportDao"/>
     </bean>
 

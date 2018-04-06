@@ -1,5 +1,6 @@
-package com.spring.itdocmanager.dao;
+package com.spring.itdocmanager.dao.impl;
 
+import com.spring.itdocmanager.dao.BugReportDao;
 import com.spring.itdocmanager.model.BugReport;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class BugReportDaoImpl implements BugReportDao{
+public class BugReportDaoImpl implements BugReportDao {
     private static final Logger logger = LoggerFactory.getLogger(BugReportDaoImpl.class);
 
     private SessionFactory sessionFactory;

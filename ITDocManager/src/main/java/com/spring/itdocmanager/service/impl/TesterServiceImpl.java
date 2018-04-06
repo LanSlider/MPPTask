@@ -1,7 +1,8 @@
-package com.spring.itdocmanager.service;
+package com.spring.itdocmanager.service.impl;
 
 import com.spring.itdocmanager.dao.TesterDao;
 import com.spring.itdocmanager.model.Tester;
+import com.spring.itdocmanager.service.TesterService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,6 +39,10 @@ public class TesterServiceImpl implements TesterService {
     public Tester getTesterById(int id) {
         return this.testerDao.getTesterById(id);
     }
+
+    @Override
+    @Transactional
+    public Boolean isGetBugReportById(int id) { return this.testerDao.isGetBugReportById(id); }
 
     @Override
     @Transactional

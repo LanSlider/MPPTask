@@ -1,10 +1,10 @@
-package com.spring.itdocmanager.dao;
+package com.spring.itdocmanager.service;
 
 import com.spring.itdocmanager.model.Tester;
 
 import java.util.List;
 
-public interface TesterDao {
+public interface TesterService {
     public void addTester(Tester tester);
 
     public void updateTester(Tester tester);
