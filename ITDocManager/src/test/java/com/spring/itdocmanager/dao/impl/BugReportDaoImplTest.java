@@ -26,18 +26,30 @@ public class BugReportDaoImplTest {
 
     @Test
     public void updateBugReport() throws Exception {
+        BugReport report = new BugReport();
+        report.setId(1);
+        report.setNameProject("Pro1");
+        bugReportDao.addBugReport(report);
+        report.setNameProject("Pro2");
+        bugReportDao.updateBugReport(report);
+        assertEquals(bugReportDao.getBugReportById(1).getNameProject(), report.getNameProject());
     }
 
     @Test
     public void delBugReport() throws Exception {
+        BugReport report = new BugReport();
+        report.setId(1);
+        bugReportDao.addBugReport(report);
+        bugReportDao.delBugReport(report.getId());
+        assertNotEquals(bugReportDao.getBugReportById(1), report);
     }
 
     @Test
     public void getBugReportById() throws Exception {
+        BugReport report = new BugReport();
+        report.setId(1);
+        bugReportDao.addBugReport(report);
+        assertEquals(bugReportDao.getBugReportById(1), report);
     }
-
-    @Test
-    public void listBugReport() throws Exception {
-    }
-
+    
 }
