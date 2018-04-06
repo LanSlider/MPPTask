@@ -51,5 +51,5 @@ public class BugReportDaoImplTest {
         bugReportDao.addBugReport(report);
         assertEquals(bugReportDao.getBugReportById(1), report);
     }
-    
+
 }
